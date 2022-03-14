@@ -5,9 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./scss/main.css">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
     <title>Rock Paper Scissors</title>
 </head>
-<body style="background-color: #2d2d2d;">
-    
+<body>
+    <img src="./images/bg-triangle.svg" alt="" class="triangle">
+    <section class="scoreBoardSection">
+        <div class="container">
+            <div class="choices">
+                <h1>Rock</h1>
+                <h1>Paper</h1>
+                <h1>Scissors</h1>
+            </div>
+            <div class="score">
+                <h3>Score</h3>
+                <h1 id="score">10</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="buttonSection">
+        <div class="container">
+            <button class="paper" id="paper"><img src="./images/icon-paper.svg" alt=""></button>
+            <button class="scissors" id="scissors"><img src="./images/icon-scissors.svg" alt=""></button>
+            <button class="rock" id="rock"><img src="./images/icon-rock.svg" alt=""></button>
+        </div>
+    </section>
+
+    <section class="rules">
+        <div class="container">
+            <button>Rules</button>
+        </div>
+    </section>
 </body>
 </html>

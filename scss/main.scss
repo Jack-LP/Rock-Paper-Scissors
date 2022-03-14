@@ -1,0 +1,350 @@
+@import "variables";
+@import "mixins";
+
+*{
+    @include body-reset;
+}
+
+body{
+    background: $backgroundGradient;
+    font-family: $bodyFont;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    font-size: $fontLarge;
+    font-weight: $heavyWeight;
+    justify-content: space-around;
+}
+
+.triangle{
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.container{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.scoreBoardSection{
+    .container{
+        display: flex;
+        justify-content: space-between;
+        border: 4px $headerOutline solid;
+        border-radius: 20px;
+        padding: 30px;
+        text-transform: uppercase;
+        .choices{
+            h1{
+                line-height:40px;
+            }
+        }
+        .score{
+            background-color: white;
+            color: $darkText;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            width: 180px;
+            border-radius: 10px;
+            h3{
+                font-size: $fontSmall;
+                letter-spacing: 2px;
+                font-weight: $lightWeight;
+                color: $scoreText;
+            }
+            h1{
+                font-size: 4rem;
+                font-weight: $heavyWeight;
+            }
+        }   
+    }
+
+}
+
+.buttonSection{
+    .container{
+        width: 35%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 50px;
+        button{
+            width: 240px;
+            height: 240px;
+            border: none;
+            outline: none;
+            border-radius: 50%;
+            background-color: rgb(235, 235, 235);
+            transition: background-color .3s, transform .1s;
+            cursor: pointer;
+            &:hover{
+                background-color: white;
+            }
+            &:active{
+                transform: translateY(10px);
+            }
+            img{
+                width: auto;
+                height: 100px;
+            }
+        }
+        .paper{
+            border: 25px solid $paperGradient;
+            box-shadow: 0px 10px 0px 0px rgba(72,101,244,0.5);
+        }
+        .scissors{
+            border: 25px solid $scissorsGradient;
+            box-shadow: 0px 10px 0px 0px rgba(236,158,14,0.5);
+        }
+        .rock{
+            border: 25px solid $rockGradient;
+            box-shadow: 0px 10px 0px 0px rgba(220,46,78,0.5);
+        }
+    }
+}
+
+.rules{
+    .container{
+        display: flex;
+        width: 95%;
+        button{
+            cursor: pointer;
+            margin-left: auto;
+            padding: 15px 50px;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            font-family: $bodyFont;
+            font-weight: $lightWeight;
+            background: transparent;
+            outline: none;
+            border: 3px solid $headerOutline;
+            border-radius: 10px;
+            color: white;
+            letter-spacing: 2px;
+            transition: transform .1s;
+            &:active{
+                transform: translateY(3px);
+            }        
+        }
+    }
+}
+
+@media only screen and (max-width: 1660px) {
+    .buttonSection{
+        .container{
+            width: 40%;
+        }
+    }
+}
+
+@media only screen and (max-width: 1450px) {
+   .scoreBoardSection{
+       .container{
+           width: 70%;
+       }
+   }
+   .buttonSection{
+       .container{
+           width: 50%;
+       }
+   }
+}
+
+@media only screen and (max-width: 1160px) {
+   .buttonSection{
+       .container{
+           width: 60%;
+       }
+   }
+}
+
+@media only screen and (max-width: 970px) {
+   .scoreBoardSection{
+       .container{
+           width: 80%;
+       }
+   }
+   .buttonSection{
+       .container{
+           width: 70%;
+       }
+   }
+}
+
+@media only screen and (max-width: 830px) {
+   .buttonSection{
+       .container{
+           width: 80%;
+       }
+   }
+}
+
+@media only screen and (max-width: 725px) {
+   .scoreBoardSection{
+       .container{
+           width: 95%;
+       }
+   }
+   .buttonSection{
+       .container{
+           width: 90%;
+       }
+   }
+}
+
+@media only screen and (max-width: 650px) {
+   .buttonSection{
+       .container{
+           button{
+               width: 200px;
+               height: 200px;
+               img{
+                   width: auto;
+                   height: 70px;
+               }
+           }
+       }
+   }
+   .rules{
+       .container{
+           justify-content: center;
+           button{
+               margin: 0;
+           }
+       }
+   }
+}
+
+@media only screen and (max-width: 560px) {
+   .buttonSection{
+       .container{
+           gap: 70px;
+       }
+   }
+}
+
+@media only screen and (max-width: 560px) {
+   .buttonSection{
+       .container{
+           gap: 40px;
+       }
+   }
+}
+
+@media only screen and (max-width: 485px) {
+   .scoreBoardSection{
+       .container{
+           align-items: center;
+           .choices{
+               h1{
+                   font-size: 1.8rem;
+                   line-height: 25px;
+               }
+           }
+           .score{
+               width: 150px;
+           }
+       }
+   }
+   .buttonSection{
+       .container{
+           gap: 40px;
+           button{
+               width: 170px;
+               height: 170px;
+               img{
+                   width: auto;
+                   height: 70px;
+               }
+           }
+           .paper{
+               border: 18px solid $paperGradient;
+           }
+           .scissors{
+               border: 18px solid $scissorsGradient;
+           }
+           .rock{
+               border: 18px solid $rockGradient;
+           }
+       }
+   }
+}
+
+@media only screen and (max-width: 425px) {
+   .buttonSection{
+       .container{
+           gap: 40px;
+           button{
+               width: 150px;
+               height: 150px;
+               img{
+                   width: auto;
+                   height: 60px;
+               }
+           }
+       }
+   }
+}
+
+@media only screen and (max-width: 425px) {
+   .buttonSection{
+       .container{
+           gap: 40px;
+           button{
+               width: 140px;
+               height: 140px;
+               img{
+                   width: auto;
+                   height: 60px;
+               }
+           }
+           .paper{
+            border: 15px solid $paperGradient;
+            box-shadow: 0px 8px 0px 0px rgba(72,101,244,0.5);
+            }
+            .scissors{
+                border: 15px solid $scissorsGradient;
+                box-shadow: 0px 8px 0px 0px rgba(236,158,14,0.5);
+            }
+            .rock{
+                border: 15px solid $rockGradient;
+                box-shadow: 0px 8px 0px 0px rgba(220,46,78,0.5);
+            }
+       }
+   }
+}
+
+@media only screen and (max-width: 375px) {
+   .buttonSection{
+       .container{
+           gap: 30px;
+           button{
+               width: 150px;
+               height: 150px;
+               img{
+                   width: auto;
+                   height: 60px;
+               }
+           }
+           .paper{
+               border: 15px solid $paperGradient;
+               box-shadow: 0px 8px 0px 0px rgba(72,101,244,0.5);
+           }
+           .scissors{
+               border: 15px solid $scissorsGradient;
+               box-shadow: 0px 8px 0px 0px rgba(236,158,14,0.5);
+           }
+           .rock{
+               border: 15px solid $rockGradient;
+               box-shadow: 0px 8px 0px 0px rgba(220,46,78,0.5);
+           }
+       }
+   }
+}

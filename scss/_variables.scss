@@ -1,0 +1,25 @@
+@import url(https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+$bodyFont: "Barlow Semi Condensed", sans-serif;
+
+// Color
+
+$scissorsGradient: rgba(236,158,14,1);
+$paperGradient: rgba(72,101,244,1);
+$rockGradient: rgba(220,46,78,1);
+
+$cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%);
+
+$darkText: hsl(229, 25%, 31%);
+$scoreText: hsl(229, 64%, 46%);
+$headerOutline: hsl(217, 16%, 45%);
+
+$backgroundGradient: radial-gradient(circle at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+
+// Font
+
+$heavyWeight: 700;
+$lightWeight: 600;
+
+$fontLarge: 1.8rem;
+$fontSmall: 1.1rem;

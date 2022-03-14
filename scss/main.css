@@ -1,0 +1,361 @@
+@import url(https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle at top, #1f3756, #141539);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  color: white;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1.8rem;
+  font-weight: 700;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.triangle {
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.scoreBoardSection .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 4px #606e85 solid;
+  border-radius: 20px;
+  padding: 30px;
+  text-transform: uppercase;
+}
+
+.scoreBoardSection .container .choices h1 {
+  line-height: 40px;
+}
+
+.scoreBoardSection .container .score {
+  background-color: white;
+  color: #3b4363;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 180px;
+  border-radius: 10px;
+}
+
+.scoreBoardSection .container .score h3 {
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: #2a46c0;
+}
+
+.scoreBoardSection .container .score h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.buttonSection .container {
+  width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 50px;
+}
+
+.buttonSection .container button {
+  width: 240px;
+  height: 240px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  background-color: #ebebeb;
+  -webkit-transition: background-color .3s, -webkit-transform .1s;
+  transition: background-color .3s, -webkit-transform .1s;
+  transition: background-color .3s, transform .1s;
+  transition: background-color .3s, transform .1s, -webkit-transform .1s;
+  cursor: pointer;
+}
+
+.buttonSection .container button:hover {
+  background-color: white;
+}
+
+.buttonSection .container button:active {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.buttonSection .container button img {
+  width: auto;
+  height: 100px;
+}
+
+.buttonSection .container .paper {
+  border: 25px solid #4865f4;
+  -webkit-box-shadow: 0px 10px 0px 0px rgba(72, 101, 244, 0.5);
+          box-shadow: 0px 10px 0px 0px rgba(72, 101, 244, 0.5);
+}
+
+.buttonSection .container .scissors {
+  border: 25px solid #ec9e0e;
+  -webkit-box-shadow: 0px 10px 0px 0px rgba(236, 158, 14, 0.5);
+          box-shadow: 0px 10px 0px 0px rgba(236, 158, 14, 0.5);
+}
+
+.buttonSection .container .rock {
+  border: 25px solid #dc2e4e;
+  -webkit-box-shadow: 0px 10px 0px 0px rgba(220, 46, 78, 0.5);
+          box-shadow: 0px 10px 0px 0px rgba(220, 46, 78, 0.5);
+}
+
+.rules .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 95%;
+}
+
+.rules .container button {
+  cursor: pointer;
+  margin-left: auto;
+  padding: 15px 50px;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 600;
+  background: transparent;
+  outline: none;
+  border: 3px solid #606e85;
+  border-radius: 10px;
+  color: white;
+  letter-spacing: 2px;
+  -webkit-transition: -webkit-transform .1s;
+  transition: -webkit-transform .1s;
+  transition: transform .1s;
+  transition: transform .1s, -webkit-transform .1s;
+}
+
+.rules .container button:active {
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+@media only screen and (max-width: 1660px) {
+  .buttonSection .container {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 1450px) {
+  .scoreBoardSection .container {
+    width: 70%;
+  }
+  .buttonSection .container {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1160px) {
+  .buttonSection .container {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 970px) {
+  .scoreBoardSection .container {
+    width: 80%;
+  }
+  .buttonSection .container {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .buttonSection .container {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 725px) {
+  .scoreBoardSection .container {
+    width: 95%;
+  }
+  .buttonSection .container {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .buttonSection .container button {
+    width: 200px;
+    height: 200px;
+  }
+  .buttonSection .container button img {
+    width: auto;
+    height: 70px;
+  }
+  .rules .container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .rules .container button {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .buttonSection .container {
+    gap: 70px;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .buttonSection .container {
+    gap: 40px;
+  }
+}
+
+@media only screen and (max-width: 485px) {
+  .scoreBoardSection .container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .scoreBoardSection .container .choices h1 {
+    font-size: 1.8rem;
+    line-height: 25px;
+  }
+  .scoreBoardSection .container .score {
+    width: 150px;
+  }
+  .buttonSection .container {
+    gap: 40px;
+  }
+  .buttonSection .container button {
+    width: 170px;
+    height: 170px;
+  }
+  .buttonSection .container button img {
+    width: auto;
+    height: 70px;
+  }
+  .buttonSection .container .paper {
+    border: 18px solid #4865f4;
+  }
+  .buttonSection .container .scissors {
+    border: 18px solid #ec9e0e;
+  }
+  .buttonSection .container .rock {
+    border: 18px solid #dc2e4e;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .buttonSection .container {
+    gap: 40px;
+  }
+  .buttonSection .container button {
+    width: 150px;
+    height: 150px;
+  }
+  .buttonSection .container button img {
+    width: auto;
+    height: 60px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .buttonSection .container {
+    gap: 40px;
+  }
+  .buttonSection .container button {
+    width: 140px;
+    height: 140px;
+  }
+  .buttonSection .container button img {
+    width: auto;
+    height: 60px;
+  }
+  .buttonSection .container .paper {
+    border: 15px solid #4865f4;
+    -webkit-box-shadow: 0px 8px 0px 0px rgba(72, 101, 244, 0.5);
+            box-shadow: 0px 8px 0px 0px rgba(72, 101, 244, 0.5);
+  }
+  .buttonSection .container .scissors {
+    border: 15px solid #ec9e0e;
+    -webkit-box-shadow: 0px 8px 0px 0px rgba(236, 158, 14, 0.5);
+            box-shadow: 0px 8px 0px 0px rgba(236, 158, 14, 0.5);
+  }
+  .buttonSection .container .rock {
+    border: 15px solid #dc2e4e;
+    -webkit-box-shadow: 0px 8px 0px 0px rgba(220, 46, 78, 0.5);
+            box-shadow: 0px 8px 0px 0px rgba(220, 46, 78, 0.5);
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .buttonSection .container {
+    gap: 30px;
+  }
+  .buttonSection .container button {
+    width: 150px;
+    height: 150px;
+  }
+  .buttonSection .container button img {
+    width: auto;
+    height: 60px;
+  }
+  .buttonSection .container .paper {
+    border: 15px solid #4865f4;
+    -webkit-box-shadow: 0px 8px 0px 0px rgba(72, 101, 244, 0.5);
+            box-shadow: 0px 8px 0px 0px rgba(72, 101, 244, 0.5);
+  }
+  .buttonSection .container .scissors {
+    border: 15px solid #ec9e0e;
+    -webkit-box-shadow: 0px 8px 0px 0px rgba(236, 158, 14, 0.5);
+            box-shadow: 0px 8px 0px 0px rgba(236, 158, 14, 0.5);
+  }
+  .buttonSection .container .rock {
+    border: 15px solid #dc2e4e;
+    -webkit-box-shadow: 0px 8px 0px 0px rgba(220, 46, 78, 0.5);
+            box-shadow: 0px 8px 0px 0px rgba(220, 46, 78, 0.5);
+  }
+}
+/*# sourceMappingURL=main.css.map */

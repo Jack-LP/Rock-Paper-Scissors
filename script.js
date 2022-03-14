@@ -70,5 +70,3 @@ function playerPlay(){
     )
     return(playerSelect)
 }
-
-// game()

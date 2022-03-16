@@ -25,6 +25,14 @@ body {
       justify-content: space-around;
 }
 
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 .blur {
   -webkit-filter: blur(10px);
           filter: blur(10px);
@@ -32,7 +40,7 @@ body {
 
 .triangle {
   position: absolute;
-  top: 57%;
+  top: 53%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);

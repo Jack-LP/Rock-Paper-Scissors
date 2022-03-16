@@ -66,6 +66,6 @@ function calcWinner(){
             playerScoreDisplay.innerHTML = playerScore;
     }
     else {
-        console.log("error");
+        console.log("tie");
     }
 }

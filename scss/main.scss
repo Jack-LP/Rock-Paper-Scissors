@@ -462,3 +462,35 @@ body{
     }
 }
 }
+
+@media only screen and (max-height: 915px) {
+    .triangle{
+        height: auto;
+        width: 200px;
+        top: 50%;
+    }
+}
+
+@media only screen and (max-height: 915px) {
+    .triangle{
+        height: auto;
+        width: 200px;
+        top: 52%;
+    }
+}
+
+@media only screen and (max-height: 740px) {
+    .triangle{
+        height: auto;
+        width: 200px;
+        top: 54%;
+    }
+}
+
+@media only screen and (max-height: 620px) {
+    .triangle{
+        height: auto;
+        width: 200px;
+        top: 55%;
+    }
+}

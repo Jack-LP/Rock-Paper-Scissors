@@ -11,7 +11,11 @@
 </head>
 <body>
     <img src="./images/bg-triangle.svg" alt="" class="triangle">
-    <section class="scoreBoardSection">
+    <div class="rulesImg" id="rulesImg">
+        <h1>Rules</h1>
+        <img src="./images/image-rules.svg" alt="">
+    </div>
+    <section class="scoreBoardSection" id="scoreBoardSection">
         <div class="container">
             <div class="choices">
                 <h1>Rock</h1>
@@ -20,22 +24,30 @@
             </div>
             <div class="score">
                 <h3>Score</h3>
-                <h1 id="score">10</h1>
+                <h1 id="score">0</h1>
             </div>
         </div>
     </section>
 
-    <section class="buttonSection">
+    <section class="buttonSection" id="buttonSection">
         <div class="container">
-            <button class="paper" id="paper"><img src="./images/icon-paper.svg" alt=""></button>
-            <button class="scissors" id="scissors"><img src="./images/icon-scissors.svg" alt=""></button>
-            <button class="rock" id="rock"><img src="./images/icon-rock.svg" alt=""></button>
+            <button class="paper choiceBtn" id="paper"><img src="./images/icon-paper.svg" alt=""></button>
+            <button class="scissors choiceBtn" id="scissors"><img src="./images/icon-scissors.svg" alt=""></button>
+            <button class="rock choiceBtn" id="rock"><img src="./images/icon-rock.svg" alt=""></button>
+        </div>
+    </section>
+
+    <section class="choiceText" id="choiceText">
+        <div class="container">
+            <h1><span id="playerText" class="playerText"></span></h1>
+            <h1 class="vs">VS</h1>
+            <h1><span id="compText" class="compText"></span></h1>
         </div>
     </section>
 
     <section class="rules">
         <div class="container">
-            <button>Rules</button>
+            <button id="rulesBtn">Rules</button>
         </div>
     </section>
 </body>

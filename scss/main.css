@@ -25,6 +25,11 @@ body {
       justify-content: space-around;
 }
 
+.blur {
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+}
+
 .triangle {
   position: absolute;
   top: 57%;
@@ -32,6 +37,33 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: -1;
+}
+
+.rulesImg {
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  z-index: 100;
+  padding: 20px 30px;
+  border-radius: 20px;
+  color: #3b4363;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.rulesImg img {
+  height: auto;
+  width: 600px;
 }
 
 .container {
@@ -144,6 +176,26 @@ body {
           box-shadow: 0px 10px 0px 0px rgba(220, 46, 78, 0.5);
 }
 
+.choiceText .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.choiceText .container h1 {
+  font-size: 40px;
+}
+
+.choiceText .container .vs {
+  position: absolute;
+}
+
 .rules .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -153,7 +205,6 @@ body {
 
 .rules .container button {
   cursor: pointer;
-  margin-left: auto;
   padding: 15px 50px;
   font-size: 1.3rem;
   text-transform: uppercase;
@@ -169,6 +220,7 @@ body {
   transition: -webkit-transform .1s;
   transition: transform .1s;
   transition: transform .1s, -webkit-transform .1s;
+  margin-left: auto;
 }
 
 .rules .container button:active {
@@ -195,6 +247,19 @@ body {
   .buttonSection .container {
     width: 60%;
   }
+  .choiceText .container {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .choiceText .container h1 {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 1660px) {
+  .rulesImg img {
+    width: 550px;
+  }
 }
 
 @media only screen and (max-width: 970px) {
@@ -219,6 +284,11 @@ body {
   .buttonSection .container {
     width: 90%;
   }
+  .choiceText .container {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 80%;
+  }
 }
 
 @media only screen and (max-width: 650px) {
@@ -231,18 +301,14 @@ body {
     height: 70px;
   }
   .rules .container {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .rules .container button {
     margin: 0;
   }
-}
-
-@media only screen and (max-width: 560px) {
-  .buttonSection .container {
-    gap: 70px;
+  .rulesImg img {
+    width: 470px;
   }
 }
 
@@ -250,9 +316,15 @@ body {
   .buttonSection .container {
     gap: 40px;
   }
+  .rulesImg img {
+    width: 240px;
+  }
 }
 
-@media only screen and (max-width: 485px) {
+@media only screen and (max-width: 560px) and (max-width: 485px) {
+  .triangle {
+    top: 52%;
+  }
   .scoreBoardSection .container {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -285,9 +357,14 @@ body {
   .buttonSection .container .rock {
     border: 18px solid #dc2e4e;
   }
+  .choiceText .container {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 90%;
+  }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 560px) and (max-width: 425px) {
   .buttonSection .container {
     gap: 40px;
   }
@@ -301,7 +378,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 560px) and (max-width: 425px) {
   .buttonSection .container {
     gap: 40px;
   }
@@ -330,7 +407,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 560px) and (max-width: 375px) {
   .buttonSection .container {
     gap: 30px;
   }
@@ -356,6 +433,43 @@ body {
     border: 15px solid #dc2e4e;
     -webkit-box-shadow: 0px 8px 0px 0px rgba(220, 46, 78, 0.5);
             box-shadow: 0px 8px 0px 0px rgba(220, 46, 78, 0.5);
+  }
+}
+
+@media only screen and (max-width: 560px) and (max-width: 375px) {
+  .triangle {
+    height: auto;
+    width: 260px;
+    top: 50%;
+  }
+  .buttonSection .container {
+    gap: 40px;
+  }
+  .buttonSection .container button {
+    width: 120px;
+    height: 120px;
+  }
+  .buttonSection .container button img {
+    width: auto;
+    height: 50px;
+  }
+  .scoreBoardSection .container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .scoreBoardSection .container .choices h1 {
+    font-size: 1.8rem;
+    line-height: 25px;
+  }
+  .scoreBoardSection .container .score {
+    width: 120px;
+  }
+  .choiceText .container {
+    width: 100%;
+  }
+  .choiceText .container h1 {
+    font-size: 25px;
   }
 }
 /*# sourceMappingURL=main.css.map */

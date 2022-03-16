@@ -18,12 +18,36 @@ body{
     justify-content: space-around;
 }
 
+.blur{
+    filter: blur(10px);
+}
+
 .triangle{
     position: absolute;
     top: 57%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
+}
+
+.rulesImg{
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    z-index: 100;
+    padding: 20px 30px;
+    border-radius: 20px;
+    color: $darkText;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    img{
+        height: auto;
+        width: 600px;
+    }
 }
 
 .container{
@@ -110,13 +134,26 @@ body{
     }
 }
 
+.choiceText{
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        h1{
+            font-size: 40px;
+        }
+        .vs{
+            position: absolute;
+        }
+    }
+}
+
 .rules{
     .container{
         display: flex;
         width: 95%;
         button{
             cursor: pointer;
-            margin-left: auto;
             padding: 15px 50px;
             font-size: 1.3rem;
             text-transform: uppercase;
@@ -129,6 +166,7 @@ body{
             color: white;
             letter-spacing: 2px;
             transition: transform .1s;
+            margin-left: auto;
             &:active{
                 transform: translateY(3px);
             }        
@@ -163,6 +201,22 @@ body{
            width: 60%;
        }
    }
+   .choiceText{
+    .container{
+        justify-content: space-around;
+        h1{
+            font-size: 30px;
+        }
+    }
+}
+}
+
+@media only screen and (max-width: 1660px) {
+    .rulesImg{
+        img{
+            width: 550px;
+        }
+    }
 }
 
 @media only screen and (max-width: 970px) {
@@ -197,6 +251,12 @@ body{
            width: 90%;
        }
    }
+   .choiceText{
+    .container{
+        justify-content: space-around;
+        width: 80%;
+    }
+}
 }
 
 @media only screen and (max-width: 650px) {
@@ -214,67 +274,77 @@ body{
    }
    .rules{
        .container{
-           justify-content: center;
+           justify-content: space-around;
            button{
                margin: 0;
            }
        }
    }
+   .rulesImg{
+    img{
+        width: 470px;
+    }
+}
 }
 
 @media only screen and (max-width: 560px) {
-   .buttonSection{
-       .container{
-           gap: 70px;
-       }
-   }
-}
-
-@media only screen and (max-width: 560px) {
-   .buttonSection{
-       .container{
-           gap: 40px;
-       }
-   }
+    .buttonSection{
+        .container{
+            gap: 40px;
+        }
+    }
+    .rulesImg{
+        img{
+            width: 240px;
+    }
 }
 
 @media only screen and (max-width: 485px) {
-   .scoreBoardSection{
-       .container{
-           align-items: center;
-           .choices{
-               h1{
-                   font-size: 1.8rem;
-                   line-height: 25px;
-               }
-           }
-           .score{
-               width: 150px;
-           }
-       }
-   }
-   .buttonSection{
-       .container{
-           gap: 40px;
-           button{
-               width: 170px;
-               height: 170px;
-               img{
-                   width: auto;
-                   height: 70px;
-               }
-           }
-           .paper{
-               border: 18px solid $paperGradient;
-           }
-           .scissors{
-               border: 18px solid $scissorsGradient;
-           }
-           .rock{
-               border: 18px solid $rockGradient;
-           }
-       }
-   }
+    .triangle{
+        top: 52%;
+    }
+    .scoreBoardSection{
+        .container{
+            align-items: center;
+            .choices{
+                h1{
+                    font-size: 1.8rem;
+                    line-height: 25px;
+                }
+            }
+            .score{
+                width: 150px;
+            }
+        }
+    }
+    .buttonSection{
+        .container{
+            gap: 40px;
+            button{
+                width: 170px;
+                height: 170px;
+                img{
+                    width: auto;
+                    height: 70px;
+                }
+            }
+            .paper{
+                border: 18px solid $paperGradient;
+            }
+            .scissors{
+                border: 18px solid $scissorsGradient;
+            }
+            .rock{
+                border: 18px solid $rockGradient;
+            }
+        }
+    }
+    .choiceText{
+        .container{
+            justify-content: space-around;
+            width: 90%;
+        }
+    }
 }
 
 @media only screen and (max-width: 425px) {
@@ -347,4 +417,48 @@ body{
            }
        }
    }
+}
+
+@media only screen and (max-width: 375px) {
+    .triangle{
+        height: auto;
+        width: 260px;
+        top: 50%;
+    }
+    .buttonSection{
+        .container{
+            gap: 40px;
+            button{
+                width: 120px;
+                height: 120px;
+                img{
+                    width: auto;
+                    height: 50px;
+                }
+            }
+        }
+    }
+    .scoreBoardSection{
+        .container{
+            align-items: center;
+            .choices{
+                h1{
+                    font-size: 1.8rem;
+                    line-height: 25px;
+                }
+            }
+            .score{
+                width: 120px;
+            }
+        }
+    }
+    .choiceText{
+        .container{
+            width: 100%;
+            h1{
+                font-size: 25px;
+            }
+        }
+    }
+}
 }
